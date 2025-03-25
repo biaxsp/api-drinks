@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+    <title>Miniaturas de Drinks</title>
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <nav>
+            <div class="logo">
+                <i class="fas fa-cocktail"></i>
+                <span>Drink Explorer</span>
+            </div>
+            <ul>
+                <li><a href="#" id="home-link"><i class="fas fa-home"></i> HOME</a></li>
+                <li><a href="#" id="miniaturas-link"><i class="fas fa-wine-bottle"></i> INGREDIENTES</a></li>
+                <li><a href="#" id="drinks-link"><i class="fas fa-glass-martini-alt"></i> DRINKS</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Página Inicial -->
+    <div id="home-page" class="page active">
+        <div class="hero">
+            <h1>EXPLORE O MUNDO DOS DRINKS</h1>
+            <p class="subtitle">Descubra receitas incríveis e ingredientes exclusivos</p>
+            <div class="main-image">
+                <img src="https://www.thecocktaildb.com/images/media/drink/metwgh1606770327.jpg" alt="Destaque de drink">
+            </div>
+            <div class="cta-buttons">
+                <a href="#" id="miniaturas-cta" class="cta-button"><i class="fas fa-wine-bottle"></i> Ver Ingredientes</a>
+                <a href="#" id="drinks-cta" class="cta-button"><i class="fas fa-glass-martini-alt"></i> Explorar Drinks</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Miniaturas de Bebidas -->
+    <div id="miniaturas-page" class="page">
+        <div class="container">
+            <h2><i class="fas fa-wine-bottle"></i> INGREDIENTES</h2>
+            <div class="search-container">
+                <i class="fas fa-search"></i>
+                <input type="text" id="search-miniaturas" placeholder="Pesquise ingredientes...">
+            </div>
+            <div id="miniaturas-container" class="grid-container"></div>
+        </div>
+    </div>
+
+    <!-- Tipos de Drinks -->
+    <div id="drinks-page" class="page">
+        <div class="container">
+            <h2><i class="fas fa-glass-martini-alt"></i> DRINKS</h2>
+            <div class="search-container">
+                <i class="fas fa-search"></i>
+                <input type="text" id="search-drinks" placeholder="Pesquise drinks...">
+            </div>
+            <div id="drinks-container" class="grid-container"></div>
+        </div>
+    </div>
+
+    <!-- Detalhes do Drink -->
+    <div id="drink-details" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <div id="drink-details-content"></div>
+        </div>
+    </div>
+
+    <!-- Botão de Voltar -->
+    <button id="back-button" class="hidden">
+        <i class="fas fa-arrow-left"></i> Voltar
+    </button>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>Dados fornecidos por TheCocktailDB</p>
+    </footer>
+</body>
+</html>
